@@ -130,6 +130,10 @@ nav a:hover {
   left: 350px;  /* distance from left */
 }
 
+.block img {
+  width: 100px;
+}
+
 .block p {
     font-family: "Jacquard 12", system-ui;
   color: #8B0000;
