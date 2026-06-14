@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>cryptic murmur — guestbook</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jacquard+12&family=UnifrakturMaguntia&display=swap" rel="stylesheet">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+  <body>
+    <nav>
+  <a href="/">Home</a>
+  <a href="/guestbook/">Guestbook</a>
+  <a href="/manifesto/">Manifesto</a>
+</nav>
+
+    <h1>Guestbook</h1>
+
+<div style="max-width: 600px; margin: 0 auto; padding: 20px;">
+  <div class="gb-form">
+    <form method="POST">
+      {% csrf_token %}
+      <input type="text" name="name" placeholder="your name" maxlength="50" required>
+      <textarea name="message" placeholder="leave a message..." maxlength="300" required></textarea>
+      <button type="submit">sign it</button>
+    </form>
+  </div>
+
+  <div class="gb-entries">
+    {% for entry in entries %}
+    <div class="gb-entry">
+      <span class="gb-name">{{ entry.name }}</span>
+      <span class="gb-date">{{ entry.date|date:"Y-m-d H:i" }}</span>
+      <p class="gb-message">{{ entry.message }}</p>
+    </div>
+    {% endfor %}
+  </div>
+</div>
+
+  </body>
+</html>

@@ -1,0 +1,213 @@
+
+h1 {
+  font-family: 'UnifrakturMaguntia', cursive;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 40px;
+  color: #8B0000;
+  text-align: center;
+  justify-content: center;  
+  align-items: center; 
+  display: flex;      
+  height: 10vh;            
+  margin: 0; 
+}
+
+h2 {
+    font-family: "Jacquard 12", system-ui;
+    color: #8B0000;
+    text-align: center;
+    font-size: 30px;
+  justify-content: center;  
+  align-items: center;       
+  height: 10vh;            
+  margin: 0; 
+  display: flex;
+  animation: pulse 2s ease-in-out infinite;
+}
+
+
+@keyframes pulse {
+  0%   { opacity: 1; }
+  50%  { opacity: 0.3; }
+  100% { opacity: 1; }
+}
+
+.albums {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+  flex-wrap: wrap;
+}
+
+.albums img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  transition: opacity 0.2s;
+}
+
+.albums img:hover {
+  opacity: 0.7;
+}
+
+
+body {
+  background: #0a0a0f; 
+/**  background-image: url('183c1b4c55ab976c172ae0aa51d1fed8.gif');
+  background-repeat: no-repeat;
+ background-position: left;
+  background-size: 200px;
+  background-attachment: fixed;**/
+
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 0;
+  border-top: 1px solid #8B0000;
+  border-bottom: 1px solid #8B0000;
+  padding: 8px 0;
+  margin-bottom: 20px;
+}
+
+nav a {
+  font-family: "Jacquard 12", system-ui;
+  color: #8B0000;
+  text-decoration: none;
+  padding: 6px 20px;
+  border-right: 1px solid #8B0000;
+  font-size: 25px;
+  transition: color 0.2s, background 0.2s;
+}
+
+nav a:last-child {
+  border-right: none;
+}
+
+nav a:hover {
+  color: #0a0a0f;
+  background: #8B0000;
+}
+
+.bio {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.album-item img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+}
+
+.album-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.album-item p {
+  color: #8B0000;
+  font-family: 'Jacquard 12', system-ui;
+  font-size: 25px;
+  margin: 8px 0 0 0;
+  text-align: center;
+}
+
+.moodboard {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+}
+
+.block {
+  position: absolute;
+  top: 190px;   /* distance from top */
+  left: 350px;  /* distance from left */
+}
+
+.block p {
+    font-family: "Jacquard 12", system-ui;
+  color: #8B0000;
+  text-decoration: none;
+  padding: 6px 20px;
+  font-size: 23px;
+  text-align: center;
+}
+
+.gb-form {
+  max-width: 500px;
+  margin: 0 auto 40px;
+  padding: 24px;
+  border: 1px solid #8B0000;
+}
+
+.gb-form input,
+.gb-form textarea {
+  width: 100%;
+  background: #0a0a0f;
+  border: 1px solid #8B0000;
+  color: #8B0000;
+  font-family: 'Jacquard 12', system-ui;
+  font-size: 18px;
+  padding: 8px;
+  margin-bottom: 12px;
+  box-sizing: border-box;
+  outline: none;
+}
+
+.gb-form textarea {
+  height: 100px;
+  resize: vertical;
+}
+
+.gb-form button {
+  font-family: 'UnifrakturMaguntia', cursive;
+  font-size: 22px;
+  color: #0a0a0f;
+  background: #8B0000;
+  border: none;
+  padding: 6px 24px;
+  cursor: pointer;
+  display: block;
+  margin: 0 auto;
+}
+
+.gb-form button:hover {
+  background: #a00000;
+}
+
+.gb-entries {
+  max-width: 500px;
+  margin: 0 auto;
+  padding-bottom: 40px;
+}
+
+.gb-entry {
+  border: 1px solid #8B0000;
+  padding: 14px 18px;
+  margin-bottom: 14px;
+}
+
+.gb-name {
+  font-family: 'UnifrakturMaguntia', cursive;
+  font-size: 22px;
+  color: #8B0000;
+  margin-right: 10px;
+}
+
+.gb-date {
+  font-size: 11px;
+  color: #444;
+}
+
+.gb-message {
+  font-family: 'Jacquard 12', system-ui;
+  font-size: 18px;
+  color: #8B0000;
+  margin: 8px 0 0;
+}
