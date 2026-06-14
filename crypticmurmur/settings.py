@@ -26,6 +26,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 DEBUG = False
 
 ALLOWED_HOSTS = ['web-production-3e3da.up.railway.app']
+CSRF_TRUSTED_ORIGINS = ['https://web-production-3e3da.up.railway.app']
 
 
 # Application definition
