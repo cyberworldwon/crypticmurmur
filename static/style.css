@@ -215,3 +215,117 @@ nav a:hover {
   color: #8B0000;
   margin: 8px 0 0;
 }
+
+.zine {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.zine-block {
+  display: flex;
+  gap: 20px;
+  padding: 28px 0;
+  border-bottom: 1px solid #2a0000;
+  align-items: flex-start;
+}
+
+.zine-block:last-child {
+  border-bottom: none;
+}
+
+.zine-right {
+  flex-direction: row-reverse;
+}
+
+.zine-large .zine-images {
+  width: 55%;
+  flex-shrink: 0;
+  display: flex;
+  gap: 6px;
+}
+
+.zine-small .zine-images {
+  width: 40%;
+  flex-shrink: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.zine-images img {
+  width: calc(50% - 3px);
+  aspect-ratio: 1;
+  object-fit: cover;
+  filter: saturate(0.85);
+  transition: filter 0.3s;
+}
+
+.zine-images img:hover {
+  filter: saturate(1.2);
+}
+
+.zine-img-tall {
+  width: 55% !important;
+  aspect-ratio: 2/3 !important;
+}
+
+.zine-images-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  flex: 1;
+}
+
+.zine-images-stack img {
+  width: 100% !important;
+  aspect-ratio: 1 !important;
+}
+
+.zine-text {
+  flex: 1;
+  padding: 4px 0;
+}
+
+.zine-label {
+  font-family: 'UnifrakturMaguntia', cursive;
+  font-size: 32px;
+  color: #8B0000;
+  margin: 0 0 6px;
+  line-height: 1;
+}
+
+.zine-sub {
+  font-family: 'Jacquard 12', system-ui;
+  font-size: 13px;
+  color: #444;
+  margin: 0 0 10px;
+}
+
+.zine-body {
+  font-family: 'Jacquard 12', system-ui;
+  font-size: 17px;
+  color: #8B0000;
+  line-height: 1.8;
+  margin: 0;
+  opacity: 0.85;
+}
+
+@media (max-width: 650px) {
+  .zine-block,
+  .zine-right {
+    flex-direction: column;
+  }
+
+  .zine-large .zine-images,
+  .zine-small .zine-images {
+    width: 100%;
+  }
+
+  .zine-img-tall {
+    aspect-ratio: 1 !important;
+  }
+}
