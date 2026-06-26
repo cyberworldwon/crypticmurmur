@@ -281,7 +281,7 @@ nav a:hover {
 }
 
 .zine-images-stack img {
-  width: 100% !important;
+  width: 50% !important;
   aspect-ratio: 1 !important;
 }
 
