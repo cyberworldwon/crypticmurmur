@@ -4,6 +4,7 @@ class Entry(models.Model):
     name = models.CharField(max_length=50)
     message = models.TextField(max_length=300)
     date = models.DateTimeField(auto_now_add=True)
+    pic_link = models.URLField(null=True, blank=True)
 
     def __str__(self):
         return f"{self.name} — {self.date}"

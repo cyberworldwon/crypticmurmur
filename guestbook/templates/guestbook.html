@@ -1,43 +1,90 @@
 <!DOCTYPE html>
 <html>
-  <head>
+<head>
     <title>cryptic murmur — guestbook</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Jacquard+12&family=UnifrakturMaguntia&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Jacquard+12&family=UnifrakturMaguntia&display=swap"
+          rel="stylesheet">
     {% load static %}
     <link rel="stylesheet" href="{% static 'style.css' %}">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  </head>
-  <body>
-    <nav>
-  <a href="/">Home</a>
-  <a href="/guestbook/">Guestbook</a>
-  <a href="/manifesto/">Manifesto</a>
+</head>
+<body>
+<nav>
+    <a href="/">Home</a>
+    <a href="/guestbook/">Guestbook</a>
+    <a href="/manifesto/">Manifesto</a>
 </nav>
 
-    <h1>Guestbook</h1>
+<h1>Guestbook</h1>
 
 <div style="max-width: 600px; margin: 0 auto; padding: 20px;">
-  <div class="gb-form">
-    <form method="POST">
-      {% csrf_token %}
-      <input type="text" name="name" placeholder="your name" maxlength="50" required>
-      <textarea name="message" placeholder="leave a message..." maxlength="300" required></textarea>
-      <button type="submit">sign it</button>
-    </form>
-  </div>
+    <div class="gb-form">
+        <form method="post" enctype="multipart/form-data" id="guestbook-form">
+            {% csrf_token %}
+            <input
+                    type="text"
+                    name="name"
+                    placeholder="your name"
+                    maxlength="50"
+            >
 
-  <div class="gb-entries">
-    {% for entry in entries %}
-    <div class="gb-entry">
-      <span class="gb-name">{{ entry.name }}</span>
-      <span class="gb-date">{{ entry.date|date:"Y-m-d H:i" }}</span>
-      <p class="gb-message">{{ entry.message }}</p>
+            <textarea
+                    name="message"
+                    placeholder="leave a message..."
+                    maxlength="300"
+            ></textarea>
+
+            <input
+                    type="file"
+                    id="image"
+                    name="image"
+                    accept="image/jpeg,image/png,image/gif"
+                    hidden
+            >
+            <div class="gb-form-actions">
+                <label for="image">upload photo</label>
+                <button type="submit">sign it</button>
+            </div>
+        </form>
     </div>
-    {% endfor %}
-  </div>
 </div>
 
-  </body>
+<div class="gb-entries">
+    {% for entry in entries %}
+    <div class="gb-entry">
+        <span class="gb-name">{{ entry.name|default:"anonymous" }}</span>
+        <span class="gb-date">{{ entry.date|date:"Y-m-d H:i" }}</span>
+        {% if entry.pic_link %}
+        <div class="gb-image">
+            <img src="{{ entry.pic_link }}" alt="uploaded image">
+        </div>
+        {% endif %}
+        <p class="gb-message">{{ entry.message }}</p>
+    </div>
+    {% endfor %}
+</div>
+
+<script>
+    const form = document.getElementById('guestbook-form');
+
+    form.addEventListener('submit', function (event) {
+        const name = form.elements.name.value.trim();
+        const message = form.elements.message.value.trim();
+        const image = form.elements.image.files.length > 0;
+
+        if (name && name.length < 2) {
+            event.preventDefault();
+            alert('Name must be at least 2 characters');
+            return;
+        }
+
+        if (!message && !image) {
+            event.preventDefault();
+            alert('Please enter a message or upload an image');
+        }
+    });
+</script>
+</body>
 </html>

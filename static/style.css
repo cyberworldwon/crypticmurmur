@@ -1,16 +1,16 @@
 
 h1 {
-  font-family: 'UnifrakturMaguntia', cursive;
-  font-weight: 400;
-  font-style: normal;
-  font-size: 40px;
-  color: #8B0000;
-  text-align: center;
-  justify-content: center;  
-  align-items: center; 
-  display: flex;      
-  height: 10vh;            
-  margin: 0; 
+    font-family: 'UnifrakturMaguntia', cursive;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 40px;
+    color: #8B0000;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    height: 10vh;
+    margin: 0;
 }
 
 h2 {
@@ -18,314 +18,373 @@ h2 {
     color: #8B0000;
     text-align: center;
     font-size: 30px;
-  justify-content: center;  
-  align-items: center;       
-  height: 10vh;            
-  margin: 0; 
-  display: flex;
-  animation: pulse 2s ease-in-out infinite;
+    justify-content: center;
+    align-items: center;
+    height: 10vh;
+    margin: 0;
+    display: flex;
+    animation: pulse 2s ease-in-out infinite;
 }
 
 
 @keyframes pulse {
-  0%   { opacity: 1; }
-  50%  { opacity: 0.3; }
-  100% { opacity: 1; }
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.3;
+    }
+    100% {
+        opacity: 1;
+    }
 }
 
 .albums {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  padding: 20px;
-  flex-wrap: wrap;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+    flex-wrap: wrap;
 }
 
 .albums img {
-  width: 200px;
-  height: 200px;
-  object-fit: cover;
-  transition: opacity 0.2s;
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    transition: opacity 0.2s;
 }
 
 .albums img:hover {
-  opacity: 0.7;
+    opacity: 0.7;
 }
 
 
 body {
-  background: #0a0a0f; 
-/**  background-image: url('183c1b4c55ab976c172ae0aa51d1fed8.gif');
-  background-repeat: no-repeat;
- background-position: left;
-  background-size: 200px;
-  background-attachment: fixed;**/
+    background: #0a0a0f;
+    /**  background-image: url('183c1b4c55ab976c172ae0aa51d1fed8.gif');
+      background-repeat: no-repeat;
+     background-position: left;
+      background-size: 200px;
+      background-attachment: fixed;**/
 
 }
 
 nav {
-  display: flex;
-  justify-content: center;
-  gap: 0;
-  border-top: 1px solid #8B0000;
-  border-bottom: 1px solid #8B0000;
-  padding: 8px 0;
-  margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 0;
+    border-top: 1px solid #8B0000;
+    border-bottom: 1px solid #8B0000;
+    padding: 8px 0;
+    margin-bottom: 20px;
 }
 
 nav a {
-  font-family: "Jacquard 12", system-ui;
-  color: #8B0000;
-  text-decoration: none;
-  padding: 6px 20px;
-  border-right: 1px solid #8B0000;
-  font-size: 25px;
-  transition: color 0.2s, background 0.2s;
+    font-family: "Jacquard 12", system-ui;
+    color: #8B0000;
+    text-decoration: none;
+    padding: 6px 20px;
+    border-right: 1px solid #8B0000;
+    font-size: 25px;
+    transition: color 0.2s, background 0.2s;
 }
 
 nav a:last-child {
-  border-right: none;
+    border-right: none;
 }
 
 nav a:hover {
-  color: #0a0a0f;
-  background: #8B0000;
+    color: #0a0a0f;
+    background: #8B0000;
 }
 
 .bio {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .album-item img {
-  width: 200px;
-  height: 200px;
-  object-fit: cover;
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
 }
 
 .album-item {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .album-item p {
-  color: #8B0000;
-  font-family: 'Jacquard 12', system-ui;
-  font-size: 25px;
-  margin: 8px 0 0 0;
-  text-align: center;
+    color: #8B0000;
+    font-family: 'Jacquard 12', system-ui;
+    font-size: 25px;
+    margin: 8px 0 0 0;
+    text-align: center;
 }
 
 .moodboard {
-  position: relative;
-  width: 100%;
-  height: 100vh;
+    position: relative;
+    width: 100%;
+    height: 100vh;
 }
 
 .block {
-  position: absolute;
-  top: 190px;   /* distance from top */
-  left: 350px;  /* distance from left */
+    position: absolute;
+    top: 190px; /* distance from top */
+    left: 350px; /* distance from left */
 }
 
 .block img {
-  width: 100px;
+    width: 100px;
 }
 
 .block p {
     font-family: "Jacquard 12", system-ui;
-  color: #8B0000;
-  text-decoration: none;
-  padding: 6px 20px;
-  font-size: 23px;
-  text-align: center;
+    color: #8B0000;
+    text-decoration: none;
+    padding: 6px 20px;
+    font-size: 23px;
+    text-align: center;
 }
 
 .gb-form {
-  max-width: 500px;
-  margin: 0 auto 40px;
-  padding: 24px;
-  border: 1px solid #8B0000;
+    max-width: 500px;
+    margin: 0 auto 40px;
+    padding: 24px;
+    border: 1px solid #8B0000;
 }
 
 .gb-form input,
 .gb-form textarea {
-  width: 100%;
-  background: #0a0a0f;
-  border: 1px solid #8B0000;
-  color: #8B0000;
-  font-family: 'Jacquard 12', system-ui;
-  font-size: 18px;
-  padding: 8px;
-  margin-bottom: 12px;
-  box-sizing: border-box;
-  outline: none;
+    width: 100%;
+    background: #0a0a0f;
+    border: 1px solid #8B0000;
+    color: #8B0000;
+    font-family: 'Jacquard 12', system-ui;
+    font-size: 18px;
+    padding: 8px;
+    margin-bottom: 12px;
+    box-sizing: border-box;
+    outline: none;
 }
 
 .gb-form textarea {
-  height: 100px;
-  resize: vertical;
+    height: 100px;
+    resize: vertical;
 }
 
 .gb-form button {
-  font-family: 'UnifrakturMaguntia', cursive;
-  font-size: 22px;
-  color: #0a0a0f;
-  background: #8B0000;
-  border: none;
-  padding: 6px 24px;
-  cursor: pointer;
-  display: block;
-  margin: 0 auto;
+    font-family: 'UnifrakturMaguntia', cursive;
+    font-size: 22px;
+    color: #0a0a0f;
+    background: #8B0000;
+    border: none;
+    padding: 6px 24px;
+    cursor: pointer;
+    display: block;
 }
 
 .gb-form button:hover {
-  background: #a00000;
+    background: #a00000;
+    transition: 500ms;
 }
 
 .gb-entries {
-  max-width: 500px;
-  margin: 0 auto;
-  padding-bottom: 40px;
+    max-width: 500px;
+    margin: 0 auto;
+    padding-bottom: 40px;
 }
 
 .gb-entry {
-  border: 1px solid #8B0000;
-  padding: 14px 18px;
-  margin-bottom: 14px;
+    border: 1px solid #8B0000;
+    padding: 14px 18px;
+    margin-bottom: 14px;
 }
 
 .gb-name {
-  font-family: 'UnifrakturMaguntia', cursive;
-  font-size: 22px;
-  color: #8B0000;
-  margin-right: 10px;
+    font-family: 'UnifrakturMaguntia', cursive;
+    font-size: 22px;
+    color: #8B0000;
+    margin-right: 10px;
 }
 
 .gb-date {
-  font-size: 11px;
-  color: #444;
+    font-size: 11px;
+    color: #444;
 }
 
 .gb-message {
-  font-family: 'Jacquard 12', system-ui;
-  font-size: 18px;
-  color: #8B0000;
-  margin: 8px 0 0;
+    font-family: 'Jacquard 12', system-ui;
+    font-size: 18px;
+    color: #8B0000;
+    margin: 8px 0 0;
 }
 
 .zine {
-  max-width: 900px;
-  margin: 0 auto;
-  padding: 24px;
-  display: flex;
-  flex-direction: column;
-  gap: 0;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
 }
 
 .zine-block {
-  display: flex;
-  gap: 20px;
-  padding: 28px 0;
-  border-bottom: 1px solid #2a0000;
-  align-items: flex-start;
+    display: flex;
+    gap: 20px;
+    padding: 28px 0;
+    border-bottom: 1px solid #2a0000;
+    align-items: flex-start;
 }
 
 .zine-block:last-child {
-  border-bottom: none;
+    border-bottom: none;
 }
 
 .zine-right {
-  flex-direction: row-reverse;
+    flex-direction: row-reverse;
 }
 
 .zine-large .zine-images {
-  width: 55%;
-  flex-shrink: 0;
-  display: flex;
-  gap: 6px;
+    width: 55%;
+    flex-shrink: 0;
+    display: flex;
+    gap: 6px;
 }
 
 .zine-small .zine-images {
-  width: 40%;
-  flex-shrink: 0;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 6px;
+    width: 40%;
+    flex-shrink: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
 }
 
 .zine-images img {
-  width: calc(50% - 3px);
-  aspect-ratio: 1;
-  object-fit: cover;
-  filter: saturate(0.85);
-  transition: filter 0.3s;
+    width: calc(50% - 3px);
+    aspect-ratio: 1;
+    object-fit: cover;
+    filter: saturate(0.85);
+    transition: filter 0.3s;
 }
 
 .zine-images img:hover {
-  filter: saturate(1.2);
+    filter: saturate(1.2);
 }
 
 .zine-img-tall {
-  width: 55% !important;
-  aspect-ratio: 2/3 !important;
+    width: 55% !important;
+    aspect-ratio: 2/3 !important;
 }
 
 .zine-images-stack {
-  display: flex;
-  flex-direction: column;
-  gap: 6px;
-  flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    flex: 1;
 }
 
 .zine-images-stack img {
-  width: 50% !important;
-  aspect-ratio: 1 !important;
+    width: 50% !important;
+    aspect-ratio: 1 !important;
 }
 
 .zine-text {
-  flex: 1;
-  padding: 4px 0;
+    flex: 1;
+    padding: 4px 0;
 }
 
 .zine-label {
-  font-family: 'UnifrakturMaguntia', cursive;
-  font-size: 32px;
-  color: #8B0000;
-  margin: 0 0 6px;
-  line-height: 1;
+    font-family: 'UnifrakturMaguntia', cursive;
+    font-size: 32px;
+    color: #8B0000;
+    margin: 0 0 6px;
+    line-height: 1;
 }
 
 .zine-sub {
-  font-family: 'Jacquard 12', system-ui;
-  font-size: 13px;
-  color: #444;
-  margin: 0 0 10px;
+    font-family: 'Jacquard 12', system-ui;
+    font-size: 13px;
+    color: #444;
+    margin: 0 0 10px;
 }
 
 .zine-body {
-  font-family: 'Jacquard 12', system-ui;
-  font-size: 17px;
-  color: #8B0000;
-  line-height: 1.8;
-  margin: 0;
-  opacity: 0.85;
+    font-family: 'Jacquard 12', system-ui;
+    font-size: 17px;
+    color: #8B0000;
+    line-height: 1.8;
+    margin: 0;
+    opacity: 0.85;
+}
+
+/* PICTURES */
+
+.gb-image {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    overflow: hidden;
+    margin-top: 12px;
+}
+
+.gb-image::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5);
+    pointer-events: none;
+}
+
+.gb-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* FORM ACTIONS */
+
+.gb-form input[type="file"] {
+    display: none;
+}
+
+.gb-form-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.gb-form label {
+    font-family: 'UnifrakturMaguntia', cursive;
+    font-size: 22px;
+    color: #0a0a0f;
+    background: #8B0000;
+    border: none;
+    padding: 6px 24px;
+    cursor: pointer;
+    display: inline-block;
+}
+
+.gb-form label:hover {
+    background: #a00000;
+    transition: 500ms;
 }
 
 @media (max-width: 650px) {
-  .zine-block,
-  .zine-right {
-    flex-direction: column;
-  }
+    .zine-block,
+    .zine-right {
+        flex-direction: column;
+    }
 
-  .zine-large .zine-images,
-  .zine-small .zine-images {
-    width: 100%;
-  }
+    .zine-large .zine-images,
+    .zine-small .zine-images {
+        width: 100%;
+    }
 
-  .zine-img-tall {
-    aspect-ratio: 1 !important;
-  }
+    .zine-img-tall {
+        aspect-ratio: 1 !important;
+    }
 }
