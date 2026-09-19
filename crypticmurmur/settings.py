@@ -40,8 +40,8 @@ cloudinary.config(
 #]
 
 DEBUG = False
-ALLOWED_HOSTS = ['cyberworldwon.pythonanywhere.com']
-CSRF_TRUSTED_ORIGINS = ['https://cyberworldwon.pythonanywhere.com']
+ALLOWED_HOSTS = ['crypticmurmur.onrender.com']
+CSRF_TRUSTED_ORIGINS = ['https://crypticmurmur.onrender.com']
 
 
 # Application definition
