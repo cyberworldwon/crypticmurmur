@@ -329,13 +329,6 @@ nav a:hover {
     margin-top: 12px;
 }
 
-.gb-image::after {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: rgba(0, 0, 0, 0.5);
-    pointer-events: none;
-}
 
 .gb-image img {
     width: 100%;
