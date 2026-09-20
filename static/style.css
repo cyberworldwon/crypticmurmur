@@ -198,8 +198,7 @@ nav a:hover {
 }
 
 .gb-entry {
-    border: none;
-    border-bottom: 1px solid #8B0000;
+    border: 1px solid #8B0000;
     padding: 14px 18px;
     margin-bottom: 14px;
 }
